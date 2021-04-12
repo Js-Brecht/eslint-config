@@ -35,7 +35,7 @@
     "clean": "rimraf lib/*",
     "compile": "ttsc",
     "lint": "eslint .",
-    "prepublishOnly": "run-s build",
+    "prepublish": "run-s build",
     "test": "jest",
     "watch": "run-s clean \"compile -- -w\""
   },
