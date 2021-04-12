@@ -1,3 +1,5 @@
+import '@rushstack/eslint-patch/modern-module-resolution';
+
 import * as paths from "./paths";
 import ignorePatterns from "./ignore";
 

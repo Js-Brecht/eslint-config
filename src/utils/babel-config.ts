@@ -1,6 +1,7 @@
 import * as path from "path";
 import type { PluginItem } from "@babel/core";
 import type { JsonObject } from "type-fest";
+import type { Linter } from "eslint";
 
 export interface IExtendOptions {
     presets?: PluginItem[];
@@ -64,7 +65,7 @@ const getBabelConfig = ({
     ],
 });
 
-export const addBabelParserConfig = <T extends JsonObject>(
+export const addBabelParserConfig = <T extends JsonObject | Linter.Config>(
     config = {} as T,
     babelOptions?: IGetBabelConfigArgs,
 ) => {
