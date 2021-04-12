@@ -1,0 +1,26 @@
+{
+	"extends": [
+		"plugin:vue/recommended"
+	],
+	"rules": {
+		"indent": "off",
+		"vue/attributes-order": "off",
+		"vue/html-indent": [
+			"error",
+			"tab"
+		],
+		"vue/singleline-html-element-content-newline": 0,
+		"vue/require-prop-types": 2,
+		"vue/max-attributes-per-line": [
+			"warn",
+			{
+				"singleline": 5,
+				"multiline": {
+					"max": 1,
+					"allowFirstLine": true
+				}
+			}
+		],
+		"vue/html-self-closing": "off"
+	}
+}

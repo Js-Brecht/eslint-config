@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "commonjs",
+    "jsx": "react",
+    "declaration": true,
+    "outDir": "lib",
+    "removeComments": true,
+    "importHelpers": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"],
+      "@/*": ["src/configs/*"]
+    },
+    "plugins": [
+      {
+          "transform": "@zerollup/ts-transform-paths",
+          "exclude": ["*"]
+      }
+    ]
+  },
+  "include": [
+    "./src"
+  ]
+}

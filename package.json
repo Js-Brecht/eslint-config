@@ -1,0 +1,87 @@
+{
+  "name": "@jtechsvcs/eslint",
+  "version": "1.0.0",
+  "description": "Collection of eslint configurations for JTechSvcs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Js-Brecht/eslint-config"
+  },
+  "license": "MIT",
+  "author": "Jeremy Albright",
+  "exports": {
+    ".": "./lib/index.js",
+    "./all": "./lib/all.js",
+    "./paths": "./lib/paths.js",
+    "./react": "./lib/configs/react/index.js",
+    "./react-typescript": "./lib/configs/react-typescript/index.js",
+    "./standard": "./lib/configs/standard/index.js",
+    "./typescript": "./lib/configs/typescript/index.js",
+    "./utils": "./lib/configs/utils/index.js",
+    "./vue": "./lib/configs/vue/index.js",
+    "./vue-typescript": "./lib/configs/vue-typescript/index.js"
+  },
+  "main": "./lib/index",
+  "types": "./lib/index",
+  "bin": {
+    "eslint-jts": "./bin/eslint.js"
+  },
+  "files": [
+    "paths.js",
+    "bin",
+    "lib"
+  ],
+  "scripts": {
+    "build": "run-s clean compile",
+    "clean": "rimraf lib/*",
+    "compile": "ttsc",
+    "lint": "eslint .",
+    "prepublishOnly": "run-s build",
+    "test": "jest",
+    "watch": "run-s clean \"compile -- -w\""
+  },
+  "dependencies": {
+    "@babel/eslint-parser": "^7.12.16",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.10.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.10.4",
+    "@babel/plugin-transform-spread": "^7.10.4",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/runtime": "^7.10.4",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "@typescript-eslint/typescript-estree": "^4.15.0",
+    "eslint": "^7.20.0",
+    "eslint-plugin-compat": "^3.8.0",
+    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-graphql": "^4.0.0",
+    "eslint-plugin-jest": "^23.18.0",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "lodash.get": "^4.4.2"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.10.4",
+    "@jest/types": "^26.1.0",
+    "@types/babel__core": "^7.1.12",
+    "@types/eslint": "^7.2.0",
+    "@types/jest": "^24.0.23",
+    "@types/lodash.get": "^4.4.6",
+    "@types/node": "^14.11.8",
+    "@zerollup/ts-transform-paths": "^1.7.18",
+    "babel-jest": "^26.0.1",
+    "fs-extra": "^9.0.0",
+    "jest": "^26.6.3",
+    "jest-standard-reporter": "^1.0.4",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.1",
+    "ts-node": "^9.1.1",
+    "ttypescript": "^1.5.10",
+    "type-fest": "^0.16.0",
+    "typescript": "latest"
+  }
+}
