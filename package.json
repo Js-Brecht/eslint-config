@@ -11,6 +11,7 @@
   "exports": {
     ".": "./lib/index.js",
     "./lib/api": "./lib/api.js",
+    "./lib/api.js": "./lib/api.js",
     "./api": "./lib/api.js",
     "./all": "./lib/all.js",
     "./paths": "./lib/paths.js",
