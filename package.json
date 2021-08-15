@@ -1,6 +1,6 @@
 {
   "name": "@jtechsvcs/eslint",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Collection of eslint configurations for JTechSvcs",
   "repository": {
     "type": "git",
@@ -10,6 +10,8 @@
   "author": "Jeremy Albright",
   "exports": {
     ".": "./lib/index.js",
+    "./bin/eslint": "./bin/eslint.js",
+    "./bin/eslint.js": "./bin/eslint.js",
     "./lib/api": "./lib/api.js",
     "./lib/api.js": "./lib/api.js",
     "./api": "./lib/api.js",
